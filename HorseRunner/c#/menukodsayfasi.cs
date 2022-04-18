@@ -22,36 +22,18 @@ public class menukodsayfasi : MonoBehaviour
     int surumkontrol = 0, i = 0;
     string surumm;
 
-
-    // Start is called before the first frame update
+    //oyun sürümünün kontrolü
     void Start()
     {
         i = 0;
         StartCoroutine(surumkontrolgonder());
-        //isim.text = System.Convert.ToString(ziplamakod.isimyukle());
-        // oyunhak.text = System.Convert.ToString(ziplamakod.oyunhakkiyukle());
     }
-
-    // Update is called once per frame
+/*
     void Update()
     {
-        /*surumkontrol++;
-        /* if (System.Convert.ToInt32(oyunhak.text) > 0)
-         {
-             baslabutonu.SetActive(true);
-         }
-         if (System.Convert.ToInt32(oyunhak.text) == 0)
-         {
-             baslabutonu.SetActive(false);
-         }
-        if(surumkontrol == 10000)
-        {
-            StartCoroutine(surumkontrolgonder());
-            surumkontrol = 0;
-           
-        }*/
 
-    }
+
+    }*/
     public void baslabtn()
     {
         puan.SetActive(true);
@@ -103,7 +85,8 @@ public class menukodsayfasi : MonoBehaviour
                         yield return new WaitForSeconds(5);
                     }
                 }
-            }
+        }
+        //oyun başladığında veritabanına bilgi verecek.
         if (i == 1)
         {
             string url2 = "http://www.bnesoftware.xyz/horserunning/oyunabasladi.php";//bağlanacağımız linki yazıyoruz
@@ -113,6 +96,5 @@ public class menukodsayfasi : MonoBehaviour
             yield return sendData2;//karşı taraftan bize bir sonuç geri dönüyor
             Debug.Log(sendData2.text);
         }
-        // yazi = sendData2.text;
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class saglik : MonoBehaviour
         bandagey = this.transform.position.y;
     }
 
-    // Update is called once per frame
+    //random aralıklarla bandaj oluşumu ve hareketi.
     void Update()
     {
         saglikolusturr++;
@@ -39,6 +39,7 @@ public class saglik : MonoBehaviour
         }
     }
 
+    //karakter bandajla temas ettiğinde yapılacak işlem.
     private void OnTriggerEnter2D(Collider2D collider)
     {
         bandage.SetActive(false);

@@ -19,7 +19,8 @@ public class oklar : MonoBehaviour
     int okzamani = 0, oyunzamanı=0, okgeliszamanirastgele;
     float okx, oky, ok2y, ok2x;
     float rastgelesayi, okhizi, okyonu, rastgelesayi2, ok2yonu, ok2hizi, giftkonumx, giftkonumy;
-    // Start is called before the first frame update
+    
+
     void Start()
     {
         vur = 0;
@@ -45,22 +46,15 @@ public class oklar : MonoBehaviour
         gift.SetActive(false);
         StartCoroutine(hediye());
     }
-    // Update is called once per frame
+
     void Update()
     {
-        /*bilg.text = System.Convert.ToString(say);
-        say++;
-        if(say == 1000)
-        {
-            say = 0;
-            StartCoroutine(hediye());
-        }*/
-
         if(vur == 1)
         {
             gift.transform.position = gift.transform.position - new Vector3(0.04f, 0f, 0f);
         }
 
+        //karaktere doğru gelecek ok.
         okbasla++;
         if (okbasla > 250)
         {
@@ -84,8 +78,6 @@ public class oklar : MonoBehaviour
 
                 ok2.transform.position = ok2.transform.position - new Vector3(ok2hizi, 0f, 0f);
                 ok2.transform.position = ok2.transform.position - new Vector3(0f, ok2yonu, 0f);
-                //ok.transform.rotation = Quaternion.Euler(0f, 0f, 0.1f);
-                //ok.transform.Rotate(0.0f, 0f, -0.01f, Space.Self);
             }
             if (okzamani == (okgeliszamanirastgele + 1))
             {
@@ -143,13 +135,11 @@ public class oklar : MonoBehaviour
             }
         }
     }
+
+    //oyuncu öldüğünde çağırılacak kod.
     static public void oksifirla()
     {
         oksifirlama = 0;
-    }
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        //ziplamakod.oktemas();
     }
 
      IEnumerator hediye()

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,8 @@ public class zeminhareket : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    //oyun başladığında zeminin hareketi.
     void Update()
     {
         c++;

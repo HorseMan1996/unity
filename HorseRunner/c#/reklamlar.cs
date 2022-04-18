@@ -111,6 +111,8 @@ public class reklamlar : MonoBehaviour
             Debug.Log("Rewarded reklamımız daha yüklenmedi!!");
         }
     }*/
+
+    //oyuncunun hakkı kalmadı ise buton işlemleri
     void Update()
     {
          if (System.Convert.ToInt32(oyunhak.text) > 0)
@@ -126,6 +128,8 @@ public class reklamlar : MonoBehaviour
             reklamuyariikaresii.SetActive(true);
         }
     }
+
+    //reklam izle butonu
     public void reklambtn()
     {
         Debug.Log("butonabasildi");
@@ -134,6 +138,8 @@ public class reklamlar : MonoBehaviour
         //LoadRewardBaseAd();
         // showRewardedAd();
     }
+
+    //mağazada izlenen reklamdan gelecek rastgele para
     public void reklambtnparakazan()
     {
         pararastgele = Random.Range(3, 9);
@@ -142,6 +148,8 @@ public class reklamlar : MonoBehaviour
         UserChoseToWatchAd();
 
     }
+
+    //Reklam başlat
     private void UserChoseToWatchAd()
     {
         if (this.rewardedAd.IsLoaded())
@@ -149,6 +157,7 @@ public class reklamlar : MonoBehaviour
             this.rewardedAd.Show();
         }
     }
+
     /* private void LoadRewardBaseAd()
      {
          /*string rewardedAdid = "ca-app-pub-7834627773947316/3951195321";
@@ -204,7 +213,7 @@ public class reklamlar : MonoBehaviour
         MonoBehaviour.print("HandleRewardedAdClosed event received");
         reklamyukle();
     }
-
+    //reklamların sonunda ödüllerin eklenmesi
     public void HandleUserEarnedReward(object sender, Reward args)
     {
         string type = args.Type;

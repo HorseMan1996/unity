@@ -14,7 +14,7 @@ public class gamerinformation : MonoBehaviour
 
     string[] dizi;
 
-    // Start is called before the first frame update
+   /* // Start is called before the first frame update
     void Start()
     {
         
@@ -24,8 +24,9 @@ public class gamerinformation : MonoBehaviour
     void Update()
     {
         
-    }
+    }*/
     
+    // oyuncu daha önce bilgiler kısmına bilgilerini göndermişmi
     public void userinformationcontrol()
     {
         string path = Application.persistentDataPath + "/HorseRunninginfo.hrs";
@@ -47,6 +48,7 @@ public class gamerinformation : MonoBehaviour
         }
     }
 
+    //bilgiler panelinden bilgileri gönderme işlemi.
     public void userinformationsend()
     {
         if(infrealfirstname.text != "" || infreallastname.text != "" || infmail.text != "" || inftel.text != "")
@@ -59,7 +61,7 @@ public class gamerinformation : MonoBehaviour
         }
     }
 
-
+    //php sayfasına bilgileri gönderme.
     IEnumerator userinformation()
     {
         string url2 = "http://www.bnesoftware.xyz/horserunning/gamerinformatinsaved.php";//bağlanacağımız linki yazıyoruz
@@ -86,6 +88,7 @@ public class gamerinformation : MonoBehaviour
         }
     }
 
+    //gönderme işlemi başarılı ise bilgileri telefonada kaydetme işlemi.
     public static void informationsave(string info)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -96,6 +99,7 @@ public class gamerinformation : MonoBehaviour
         stream.Close();
     }
 
+    //Daha önce bilgiler gönderildi ise telefondan bilgileri alma işlemi
     public static string informationload()
     {
         string data2 = " ";

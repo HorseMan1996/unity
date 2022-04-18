@@ -20,11 +20,13 @@ public class sendmessage : MonoBehaviour
         
     }*/
 
+    //mesaj gönderme butonu.
     public void sendmesajbtn()
     {
         StartCoroutine(usermessage());
     }
 
+    //veri tabanına gönder.
     IEnumerator usermessage()
     {
         string url2 = "http://www.bnesoftware.xyz/horserunning/sendmessage.php";//bağlanacağımız linki yazıyoruz

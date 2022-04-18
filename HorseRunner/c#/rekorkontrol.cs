@@ -14,14 +14,6 @@ public class rekorkontrol : MonoBehaviour
     public Text isimgonder;
     public Text paramiz;
 
-
-    // Start is called before the first frame update
-  /*  void Start()
-    {
-
-    }
-  */
-    // Update is called once per frame
     void Update()
     {
         if(bulundugumyer.text == "2")
@@ -38,6 +30,8 @@ public class rekorkontrol : MonoBehaviour
            yenidenbaslabtn.SetActive(false);
         }
     }
+
+    //oyuncu oyunu tammaladığında rekoru veritabanına gönderme
     IEnumerator rekorkontrolgonder()
     {
         string url2 = "http://www.bnesoftware.xyz/horserunning/hrsrngrekor.php";//bağlanacağımız linki yazıyoruz
@@ -49,6 +43,8 @@ public class rekorkontrol : MonoBehaviour
         yield return sendData2;//karşı taraftan bize bir sonuç geri dönüyor
         Debug.Log(sendData2.text);
     }
+
+    //rekor gösterme paneli
     public void rekorpaneli()
     {
         olumpanel.SetActive(false);

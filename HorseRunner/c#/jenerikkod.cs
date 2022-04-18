@@ -37,13 +37,14 @@ public class jenerikkod : MonoBehaviour
     string yazi;
 
     int b = 0;
-    // Start is called before the first frame update
+
+    //kod sayfası başladığında çalışacak
     void Start()
     {
         yukle();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         a++;
@@ -64,6 +65,8 @@ public class jenerikkod : MonoBehaviour
             jenerik.SetActive(true);
         }
     }
+
+    //Daha önce kayıt olundu mu?
     public void yukle()
     {
         string path = Application.persistentDataPath + "/HorseRunisim.hrs";
@@ -79,6 +82,7 @@ public class jenerikkod : MonoBehaviour
         }
     }
 
+    //gönderilen ismin kontrolü
     public void isimkontrol()
     {
         if(isimkontroltext.text != "" || password.text != "")
@@ -90,6 +94,7 @@ public class jenerikkod : MonoBehaviour
             uyariyazisisimbos.SetActive(true);
         }
     }
+
 
     public void zatenolanisimkontrol()
     {
@@ -105,6 +110,7 @@ public class jenerikkod : MonoBehaviour
 
     IEnumerator isimgonderkontrol()
     {
+        //isim veri tabanında var mı yok mu?
         if(b == 0)
         {
             string url2 = "http://www.bnesoftware.xyz/horserunning/isimkontrol.php";//bağlanacağımız linki yazıyoruz
@@ -132,6 +138,7 @@ public class jenerikkod : MonoBehaviour
             }
         }
 
+        //zaten bir üyelik var ise isim ve şifreyi girip veritabanından bilgiler çekilecek.
         if(b == 1)
         {
             string url2 = "http://www.bnesoftware.xyz/horserunning/zatenkayitli.php";//bağlanacağımız linki yazıyoruz
@@ -166,6 +173,7 @@ public class jenerikkod : MonoBehaviour
         }
     }
 
+    //oyuncu bilgilerinin telefona kaydı ve yükleme işlemleri.
     public static void isimkayitet(string isim)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -215,7 +223,7 @@ public class jenerikkod : MonoBehaviour
         stream.Close();
     }
 
-
+    //ienumeratorde yapılacak işlemi seçen fonksiyonlar.
     public void zatenkayitli()
     {
         b = 1;

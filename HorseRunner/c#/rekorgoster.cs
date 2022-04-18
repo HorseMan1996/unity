@@ -36,6 +36,8 @@ public class rekorgoster : MonoBehaviour
     }
    */
     // Update is called once per frame
+
+    //rekor ve isimleri yazdırma.
     void Update()
     {
         goster++;
@@ -65,6 +67,8 @@ public class rekorgoster : MonoBehaviour
         onuncuad.text = rekorlar[18];
         onuncurekor.text = rekorlar[19];
     }
+
+    //veritabanındaki rekor ve isimleri alıyor.
     IEnumerator rekorkontrolgonder()
     {
         string url2 = "http://www.bnesoftware.xyz/horserunning/hrsrngrekorgoster.php";//bağlanacağımız linki yazıyoruz

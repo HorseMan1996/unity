@@ -18,7 +18,7 @@ public class oyuncuiletkilesim : MonoBehaviour
     {
         
     }*/
-
+    //veritabanımda yazdığım mesajın oyuncularda gözükmesi için
     IEnumerator iletisim()
     {
         string url2 = "http://www.bnesoftware.xyz/horserunning/iletisim.php";//bağlanacağımız linki yazıyoruz

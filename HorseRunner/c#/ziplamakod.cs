@@ -100,13 +100,6 @@ public class ziplamakod : MonoBehaviour
         teker.transform.position = tekerkonumu.transform.position;
         tekeron.transform.Rotate(0.0f, 0f, -3f, Space.Self);
         tekeron.transform.position = tekeronkonumu.transform.position;
-        //teker.transform.position = teker.transform.position + new Vector3(0.3f, 0f, 0f);
-        //rekorpuan.text = System.Convert.ToString(rekorkayit);
-        /*  if (m_Play == true) 
-          {
-              Debug.Log("sess");
-              yurume.Play();
-          }*/
         if (m_Play == false)
         {
             yurumesesi.Pause();
@@ -154,25 +147,6 @@ public class ziplamakod : MonoBehaviour
                 }
             }
         }
-
-        /*   if ((ziplama < 50) && (ziplama > 0))
-           {
-               m_Play = false;
-               ziplamahizlanmasi = ziplamahizlanmasi - 0.04f;
-               animator.SetBool("oturma", true);
-               karakter.transform.position = karakter.transform.position + new Vector3(0f, 0.4f * ziplamahizlanmasi, 0f);
-              // animator.SetBool("ziplama", true);
-               ziplama++;
-           }
-           if (ziplama == 50)
-           {
-               //animator.SetBool("ziplama", false);
-               ziplama = 0;
-               m_Play = true;
-               yurumesesi.Play();
-               animator.SetBool("oturma", false);
-               ziplamahizlanmasi = 1;
-           }*/
 
         if (oturma == 1)
         {
@@ -245,9 +219,6 @@ public class ziplamakod : MonoBehaviour
         {
             animator.SetBool("ikinciyara", true);
         }
-        /*if (vurulma >= 3)
-        {
-        }*/
         if (oktemasi == 1)
         {
             oktemasi = 0;
@@ -255,7 +226,6 @@ public class ziplamakod : MonoBehaviour
             ok.transform.position = new Vector3(okx, oky);
             Debug.Log("vuruldum");
             vurulmases.vuruldum();
-            //vurulmasesi.Play();
         }
 
         if (vurulma >= 3)
@@ -264,15 +234,12 @@ public class ziplamakod : MonoBehaviour
             parakodu.kazanilanpara((System.Convert.ToInt32(puantext.text)));
             oklar.oksifirla();
             bulundugumyer.text = "2";
-            //isim2 = isim.text;
-            //isimolummenu.text = isim2;
             isimolummenu.text = isimyukle();
             enyuksek();
             yara1.SetActive(false);
             yara2.SetActive(false);
             puan = 0;
             ok.transform.position = new Vector3(okx, oky);
-            //animator.SetBool("olum", true);
             oyunsahnesi.SetActive(false);
             menu.SetActive(false);
             olummenusu.SetActive(true);
@@ -339,29 +306,6 @@ public class ziplamakod : MonoBehaviour
         {
             vurulma = 3;
         }
-
-
-      /*  vurulmasesi.Play();
-        vurulma++;
-        ok.transform.position = new Vector3(okx, oky);
-        if (vurulma >= 3)
-        {
-            oklar.oksifirla();
-            bulundugumyer.text = "2";
-            isim2 = isim.text;
-            isimolummenu.text = isim2;
-            enyuksek();
-            yara1.SetActive(false);
-            yara2.SetActive(false);
-            puan = 0;
-            ok.transform.position = new Vector3(okx, oky);
-            animator.SetBool("olum", true);
-            oyunsahnesi.SetActive(false);
-            menu.SetActive(false);
-            olummenusu.SetActive(true);
-            puanbaslat = 0;
-            vurulma = 0;
-        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -655,8 +599,4 @@ public class ziplamakod : MonoBehaviour
             return data7;
         }
     }
-    /* public static void kalkanhasar()
-     {
-         kalkanvuruldu++;
-     }*/
 }

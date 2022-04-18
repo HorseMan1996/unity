@@ -42,8 +42,7 @@ public class dilsec : MonoBehaviour
 
     public Text dahafazlaparaicin;
     static int surumm = 0;
-
-
+/*
     // Start is called before the first frame update
     void Start()
     {
@@ -54,9 +53,10 @@ public class dilsec : MonoBehaviour
     void Update()
     {
         
-    }
-
+    }*/
+    
     public void trdili()
+    //Ayarlar kısmında tr butonuna basıldığında yapılacak işlemler..
     {
         dil.text = "tr";
         isimgirin.text = "Adınızı yazın...";
@@ -104,6 +104,7 @@ public class dilsec : MonoBehaviour
         //---------------------
     }
     public void endili()
+    //Ayarlar kısmında en butonuna basıldığında yapılacak işlemler..
     {
         dil.text = "en";
         isimgirin.text = "Write your name...";
@@ -149,6 +150,8 @@ public class dilsec : MonoBehaviour
         bos.text = "Please fill in blank text";
         //---------------------
     }
+
+    //ayarlar ve bilgi paneli btn işlemleri..
     public void ayarlar()
     {
         ayarlarpanel.SetActive(true);
@@ -157,13 +160,15 @@ public class dilsec : MonoBehaviour
     {
         bilgipanel.SetActive(true);
     }
+
+    //sürüm kontrolünden sonra text için..
     public static void surumdogru()
     {
         surumm = 1;
     }
 
 
-
+    //instagram yönlendirmesi..
     public void goinstagram()
     {
         Application.OpenURL(instagram);
