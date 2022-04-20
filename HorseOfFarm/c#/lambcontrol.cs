@@ -110,15 +110,6 @@ public class lambcontrol : MonoBehaviour
 
       }
 
-    /* void OnTriggerEnter(Collider collision)
-     {
-
-     }
-     void OnTriggerExit(Collider collision)
-     {
-
-     }*/
-
     void OnTriggerStay(Collider collision)
     {
         if (System.Convert.ToDouble(energys.text) > 0)
