@@ -1,4 +1,4 @@
 <?php 
-    echo "Oben rastgele bişeyler salla işte";
+    echo "Oyun duvarında gözükecek yazı";
 
 ?>
